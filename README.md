@@ -37,5 +37,5 @@ local compressedData = Zlib91.compress("example data")
 local decompressedData = Zlib91.decompress(compressedData)
 ```
 # Credits
-- [Zlib compression module for lua](https://devforum.roblox.com/t/string-compression-zlibdeflate/755687)
+- [Zlib compression module for Lua](https://devforum.roblox.com/t/string-compression-zlibdeflate/755687)
 - [Base91 module for Lua](https://gist.github.com/Dekkonot/5391144931e1bd1a6de86cf21036c651)
