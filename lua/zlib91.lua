@@ -2,16 +2,17 @@ local module = {}
 
 local compression = require("lib.compression")
 local base91 = require("lib.base91")
+local mode = {
+    level = level or 6;
+    strategy = strategy or "dynamic"
+}
 
 local function toSingleQuoto(str)
     return string.gsub(str,"\"","'")
 end
 
 function module.compress(data,useSingleQuote,level,strategy)
-    local compressed = compression.Zlib.Compress(data,{
-        level = level or 6;
-        strategy = strategy or "dynamic"
-    })
+    local compressed = compression.Zlib.Compress(data,mode)
     local base91Encoded = base91.encode(compressed)
     return not useSingleQuote and base91Encoded or toSingleQuoto(base91Encoded)
 end
