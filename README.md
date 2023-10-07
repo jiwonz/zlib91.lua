@@ -26,7 +26,7 @@ local decompressedData = zlib91.decompress(compressedData)
 - (btw, I just personally prefer to use UpperCamelCase with modules for roblox)
 ## import Zlib91 module
 ```lua
-local Zlib91 = require(script.Zlib91)
+local Zlib91 = require(script.zlib91)
 ```
 ## Zlib91.compress(data :string, useSingleQuote? :boolean, level :number, strategy :"dynamic"|"fixed"|"huffman_only") -> compressedData :string
 ```lua
